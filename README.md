@@ -1,2 +1,15 @@
-# Pracitca_2_FastApi
-Implementacion de FastApi
+# Microservicio de Gestión de Leads (FastAPI)
+
+Este proyecto es un microservicio para gestionar leads de restaurantes, construido con **FastAPI**, **PostgreSQL** y **Docker**. Permite crear leads, enriquecerlos con información externa (API) y buscar por similitud.
+
+## 🚀 Requisitos Previos
+
+- Docker y Docker Compose instalados.
+- Git.
+
+## 🛠️ Instalación y Ejecución
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone <TU_URL_DEL_REPO>
+   cd lead-service
