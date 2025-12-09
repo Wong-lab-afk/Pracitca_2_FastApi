@@ -1,5 +1,5 @@
-from pydantic import BaseModel, EmailStr
-
+from pydantic import BaseModel, EmailStr, ConfigDict
+from typing import Optional # <------------ se agrego esto por error en el docker
 # Modelo para crear un lead (Input)
 class LeadCreate(BaseModel):
     name: str
@@ -11,6 +11,11 @@ class LeadCreate(BaseModel):
 # Modelo de respuesta (Output) - hereda de Create y agrega ID
 class LeadResponse(LeadCreate):
     id: int
-    
-    class Config:
-        from_attributes = True # Antes orm_mode = True
+    # --- NUEVOS CAMPOS ---
+    latitude: Optional[float] = None
+    longitude: Optional[float] = None
+    # En V2, "orm_mode" ahora se llama "from_attributes"
+    model_config = ConfigDict(from_attributes=True)
+
+class Config:
+        orm_mode = True
