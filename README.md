@@ -11,5 +11,6 @@ Este proyecto es un microservicio para gestionar leads de restaurantes, construi
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone <TU_URL_DEL_REPO>
+   git clone https://github.com/Wong-lab-afk/Pracitca_2_FastApi/tree/main
+
    cd lead-service
